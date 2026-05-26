@@ -1,0 +1,121 @@
+.pageContent {
+    min-height: calc(100vh - 78px);
+    padding: 100px 0;
+    background-color: var(--cor-fundo);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.pageHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+.pageHeader h1 {
+    font-size: var(--tamanho-fonte-titulo);
+    color: #000000;
+}
+
+.searchArea {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.searchArea input {
+    width: 380px;
+    height: 54px;
+    border: none;
+    border-radius: 12px;
+    padding: 0 18px;
+    font-size: var(--tamanho-fonte-padrao);
+    background-color: #ffffff;
+    outline: none;
+}
+
+.searchArea input::placeholder {
+    color: #8b8b8b;
+}
+
+.filterButton {
+    width: 54px;
+    height: 54px;
+    border: 2px solid #cf2929;
+    border-radius: 12px;
+    background-color: transparent;
+    color: #cf2929;
+    font-size: 26px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.tableSection {
+    margin-top: 40px;
+    overflow-x: auto;
+}
+
+/* Seletores de foco atualizados para camelCase */
+.searchArea input:focus,
+.filterButton:focus,
+:global(.user-icon):focus,
+:global(.arrow-button):focus,
+:global(.hamburguer):focus {
+    outline: 3px solid rgba(207, 41, 41, 0.35);
+    outline-offset: 3px;
+}
+
+.srOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+/* ========================= */
+/* RESPONSIVIDADE TABLET     */
+/* ========================= */
+
+@media (max-width: 1200px) {
+    .searchArea {
+        width: 100%;
+    }
+
+    .searchArea input {
+        width: 100%;
+    }
+}
+
+/* ========================= */
+/* RESPONSIVIDADE MOBILE     */
+/* ========================= */
+
+@media (max-width: 768px) {
+    .pageContent {
+        padding: 50px 0;
+    }
+
+    .pageHeaderLayoutGuide h1 {
+        font-size: 28px;
+    }
+
+    .searchArea {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+    }
+
+    .searchArea input {
+        width: 100%;
+    }
+
+    .filterButton {
+        width: 100%;
+    }
+}
