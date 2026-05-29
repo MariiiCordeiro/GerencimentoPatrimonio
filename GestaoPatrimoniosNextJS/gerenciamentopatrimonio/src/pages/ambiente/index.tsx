@@ -1,34 +1,51 @@
+import styles from "./ambiente.module.css";
 import HeaderAccountable from "@/components/headerAccountable/headerAccountable";
-import styles from "../ambiente/ambiente.module.css"
-import Navegacao from "@/components/navegacao/navegacao";
 import ListaAmbiente from "@/components/listaAmbiente/listaAmbiente";
+import Pagination from "@/components/navegacao/navegacao";
 
-const Ambiente = () => {
+
+const ListaLocais = () => {
     return (
         <>
             <HeaderAccountable />
+
             <main className={styles.pageContent}>
-                <section className={`${styles.pageHeader} layout_guide`} aria-labelledby="titulo-ambientes">
-                    <h1 id="titulo-ambientes">Ambientes</h1>
+                <div className="layout_guide">
+                    <section className={styles.pageHeader} aria-labelledby="titulo-ambientes">
+                        <h1 id="titulo-ambientes">Ambientes</h1>
 
-                    <form className={styles.searchArea} role="search">
-                        <label htmlFor="pesquisa-ambiente" className={styles.srOnly}>Pesquisar ambiente</label>
+                        <form className={styles.searchArea} role="search">
+                            <label htmlFor="pesquisa-ambiente" className={styles.srOnly}>
+                                Pesquisar ambiente
+                            </label>
 
-                        <input type="search" id="pesquisa-ambiente" name="pesquisaAmbiente" placeholder="Pesquise o ambiente" />
+                            <input 
+                                type="search" 
+                                id="pesquisa-ambiente" 
+                                name="pesquisaAmbiente" 
+                                placeholder="Pesquise o ambiente" 
+                            />
 
-                        <button type="button" className={styles.filterButton} aria-label="Filtrar ambientes">
-                            <i className="fa-solid fa-sliders"></i>
-                        </button>
-                    </form>
-                </section>
-                <section className={`${styles.tableSection} layout_guide`}>
-                    <ListaAmbiente/>
-                </section>
-                <Navegacao />
+                            <button type="button" className={styles.filterButton} aria-label="Filtrar ambientes">
+                                <i className="fa-solid fa-sliders" />
+                            </button>
+                        </form>
+                    </section>
+                </div>
+
+                {/* 2. O componente da tabela já está isolado, mas vamos garantir que ele seja envelopado pela classe global */}
+                <div className="layout_guide">
+                    <ListaAmbiente />
+                </div>
+
+                {/* 3. Paginação */}
+                <div className="layout_guide">
+                    < Pagination/>
+                </div>
+
             </main>
-
         </>
-    )
+    );
 };
 
-export default Ambiente;
+export default ListaLocais;

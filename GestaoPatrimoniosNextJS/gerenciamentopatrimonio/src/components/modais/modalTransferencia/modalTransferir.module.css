@@ -1,0 +1,129 @@
+.modalOverlay {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.modalContainer {
+    width: 100%;
+    max-width: 970px;
+    background-color: #dde1e6;
+    border: 1px solid #ff0000;
+    border-radius: 24px;
+    padding: 55px 70px;
+    position: relative;
+}
+
+.modalClose {
+    position: absolute;
+    top: 24px;
+    right: 30px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #000000;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.modalTitle {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: #000000;
+}
+
+.modalForm {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.modalField {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.modalField label {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.modalField select,
+.modalField textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: #f4f4f4;
+    border-radius: 16px;
+    font-size: 18px;
+    color: #444444;
+}
+
+.modalField select {
+    height: 70px;
+    padding: 0 18px;
+}
+
+.modalField textarea {
+    height: 150px;
+    resize: none;
+    padding: 18px;
+}
+
+.modalButton {
+    width: 100%;
+    height: 70px;
+    border: none;
+    border-radius: 18px;
+    background: linear-gradient(90deg, #ff0000 0%, #b20d0d 100%);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modalButton:hover {
+    transform: scale(1.01);
+}
+
+@media (max-width: 768px) {
+    .modalContainer {
+        padding: 50px 24px;
+    }
+
+    .modalTitle {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+
+    .modalForm {
+        gap: 32px;
+        max-width: 100%;
+    }
+
+    .modalField label {
+        font-size: 18px;
+    }
+
+    .modalField select {
+        height: 60px;
+        font-size: 16px;
+    }
+
+    .modalField textarea {
+        font-size: 16px;
+    }
+
+    .modalButton {
+        height: 60px;
+        font-size: 18px;
+    }
+}

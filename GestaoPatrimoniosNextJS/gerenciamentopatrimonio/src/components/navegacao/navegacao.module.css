@@ -7,8 +7,8 @@
     flex-wrap: wrap;
 }
 
-.pagination-button,
-.pagination-link {
+.paginationButton,
+.paginationLink {
     width: 46px;
     height: 46px;
     display: grid;
@@ -17,32 +17,37 @@
     font-size: 22px;
 }
 
-.pagination-button {
+.paginationButton {
     border: 1px solid #9fa3a8;
     background-color: transparent;
     color: #9fa3a8;
     cursor: pointer;
 }
 
-.pagination-link {
+.paginationLink {
     font-weight: 700;
+    color: inherit;
+    text-decoration: none;
 }
 
-.pagination-link.current {
+.paginationLink.current {
     background-color: #ff0000;
     color: #ffffff;
 }
 
-.pagination-button:focus,
-.pagination-link:focus {
+/* Acessibilidade visual ao focar */
+.paginationButton:focus,
+.paginationLink:focus {
     outline: 3px solid rgba(207, 41, 41, 0.35);
     outline-offset: 3px;
 }
 
+/* ==========================================================================
+   RESPONSIVIDADE MOBILE
+   ========================================================================== */
 @media (max-width: 768px) {
     .pagination {
         margin-top: 50px;
         gap: 10px;
-        flex-wrap: wrap;
     }
 }

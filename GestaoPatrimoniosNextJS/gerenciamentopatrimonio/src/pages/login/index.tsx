@@ -1,9 +1,14 @@
-import styles from "../login/login.module.css"
+import HeaderAccountable from "@/components/headerAccountable/headerAccountable";
+import styles from "../login/login.module.css";
+import ItemAmbiente from "@/components/itemAmbiente/itemAmbiente";
+import ListaAmbiente from "@/components/listaAmbiente/listaAmbiente";
 
 const Login = () => {
   return (
     <>
-      <main className={styles.loginPage}>
+      <HeaderAccountable />
+<ListaAmbiente />
+      {/* <main className={styles.loginPage}>
         <section className={styles.loginBanner} aria-label="Apresentação do sistema">
           <img
             src="../img/loginBackground.png"
@@ -61,9 +66,9 @@ const Login = () => {
             </button>
           </form>
         </section>
-      </main>
+      </main> */}
     </>
-  )
-}
+  );
+};
 
 export default Login;

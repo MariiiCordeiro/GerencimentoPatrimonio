@@ -7,13 +7,13 @@
     flex-direction: column;
 }
 
-
 .pageHeader {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 32px;
     margin-bottom: 48px;
+    width: 100%; /* Garante que ocupe toda a largura do layout_guide */
 }
 
 .pageHeader h1 {
@@ -54,17 +54,48 @@
     flex-shrink: 0;
 }
 
-.tableSection {
-    margin-top: 40px;
-    overflow-x: auto;
+/* ==========================================================================
+   PAGINAÇÃO
+   ========================================================================== */
+.pagination {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
 }
 
-/* Seletores de foco atualizados para camelCase */
+.paginationButton,
+.paginationLink {
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    font-size: 22px;
+}
+
+.paginationButton {
+    border: 1px solid #9fa3a8;
+    background-color: transparent;
+    color: #9fa3a8;
+    cursor: pointer;
+}
+
+.paginationLink {
+    font-weight: 700;
+}
+
+.paginationLink.current {
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
 .searchArea input:focus,
 .filterButton:focus,
-:global(.user-icon):focus,
-:global(.arrow-button):focus,
-:global(.hamburguer):focus {
+.paginationButton:focus,
+.paginationLink:focus {
     outline: 3px solid rgba(207, 41, 41, 0.35);
     outline-offset: 3px;
 }
@@ -77,11 +108,16 @@
     clip: rect(0, 0, 0, 0);
 }
 
-/* ========================= */
-/* RESPONSIVIDADE TABLET     */
-/* ========================= */
-
+/* ==========================================================================
+   RESPONSIVIDADE
+   ========================================================================== */
 @media (max-width: 1200px) {
+    .pageHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
     .searchArea {
         width: 100%;
     }
@@ -91,16 +127,12 @@
     }
 }
 
-/* ========================= */
-/* RESPONSIVIDADE MOBILE     */
-/* ========================= */
-
 @media (max-width: 768px) {
     .pageContent {
         padding: 50px 0;
     }
 
-    .pageHeaderLayoutGuide h1 {
+    .pageHeader h1 {
         font-size: 28px;
     }
 
@@ -117,5 +149,10 @@
 
     .filterButton {
         width: 100%;
+    }
+
+    .pagination {
+        margin-top: 50px;
+        gap: 10px;
     }
 }

@@ -5,28 +5,21 @@
   font-family: "Montserrat", sans-serif;
 }
 
-
 :root {
   --tamanho-fonte-padrao: 16px;
-  --tamanho-fonte-titulo: 35px;
   --tamanho-fonte-subtitulo: 30px;
-
-
-  --tamanho-fonte-padrao: 16px;
   --tamanho-fonte-titulo: 35px;
+
   --cor-vermelha: #CE2C2C;
-  --cor-fundo: #eef1f5;
-  --cor-texto: #0f172a;
-  --cor-cinza: #9ca3af;
+  --cor-fundo: #EEF1F5;
+  --cor-texto: #0F172A;
+  --cor-texto-escuro: #111111;
+  --cor-cinza: #9CA3AF;
 }
 
 body {
   background-color: var(--cor-fundo);
-  color: #111111;
-}
-
-.layout_guide {
-  width: 80%;
+  color: var(--cor-texto-escuro);
 }
 
 a {
@@ -39,8 +32,12 @@ input {
   font-family: inherit;
 }
 
-@media (max-width: 1200px) {
+.layout_guide {
+  width: 80%;
+  /* margin: 0 auto; */
+}
 
+@media (max-width: 1200px) {
   .layout_guide {
     width: 90%;
   }

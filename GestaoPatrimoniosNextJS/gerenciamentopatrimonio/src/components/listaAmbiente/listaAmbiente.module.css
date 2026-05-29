@@ -1,10 +1,16 @@
+.tableSection {
+    margin-top: 40px;
+    overflow-x: auto;
+    width: 100%;
+}
+
 .environmentTable {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0 32px;
 }
 
-.environmenTable th {
+.environmentTable th {
     font-weight: 400;
     color: var(--cor-texto);
     padding-bottom: 16px;
@@ -12,17 +18,13 @@
     text-align: center;
 }
 
-
+/* ==========================================================================
+   RESPONSIVIDADE (Copiado do seu arquivo original para manter igual)
+   ========================================================================== */
 @media (max-width: 768px) {
-
-    /* ========================= */
-    /* TABELA RESPONSIVA REAL */
-    /* ========================= */
-
     .environmentTable,
     .environmentTable thead,
-    .environmentTable th,
-    .environmentTable tr {
+    .environmentTable tbody {
         display: block;
         width: 100%;
     }
@@ -35,10 +37,9 @@
         display: none;
     }
 
-    .environmentTable tr {
-        background-color: #ffffff;
-        border-radius: 14px;
-        padding: 22px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    .environmentTable tbody {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 }

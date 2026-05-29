@@ -1,10 +1,10 @@
-import ItemAmbiente from "../itemAmbiente/itemAmbiente"
-import styles from "../listaAmbiente/listaAmbiente.module.css"
+import styles from "./listaAmbiente.module.css";
+import ItemAmbiente from "../itemAmbiente/itemAmbiente";
 
 const ListaAmbiente = () => {
     return (
-        <>
-            <table className="environmentTable">
+        <section className={styles.tableSection} aria-label="Lista de ambientes">
+            <table className={styles.environmentTable}>
                 <thead>
                     <tr>
                         <th>Local</th>
@@ -12,10 +12,13 @@ const ListaAmbiente = () => {
                         <th>Detalhes</th>
                     </tr>
                 </thead>
-                <ItemAmbiente />
+
+                <tbody>
+                    <ItemAmbiente />
+                </tbody>
             </table>
-        </>
-    )
+        </section>
+    );
 };
 
 export default ListaAmbiente;

@@ -1,0 +1,47 @@
+.tableSection {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.tableSection h2 {
+    font-size: 24px;
+    color: #111111;
+    margin-bottom: 24px;
+}
+
+.historyTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 18px;
+}
+
+.historyTable th {
+    font-weight: 500;
+    color: #444444;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #cfd4da;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .historyTable,
+    .historyTable thead,
+    .historyTable tbody {
+        display: block;
+        width: 100%;
+    }
+
+    .historyTable thead {
+        display: none;
+    }
+
+    .historyTable {
+        border-spacing: 0;
+    }
+
+    .historyTable tbody {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+}
